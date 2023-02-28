@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Suspense fallback={<div>Loading...</div>}> <Login /> </Suspense>}/>
-        <Route path="/SingUp" element={<Suspense fallback={<div>Loading...</div>}> <SignUp /> </Suspense>}/>
+        <Route path="/SignUp" element={<Suspense fallback={<div>Loading...</div>}> <SignUp /> </Suspense>}/>
         <Route path="/Dashboard" element={<Suspense fallback={<div>Loading...</div>}> <Dashboard /> </Suspense>}/>
         <Route path="/Table" element={<Suspense fallback={<div>Loading...</div>}> <Table /> </Suspense>}/>
       </Routes>
