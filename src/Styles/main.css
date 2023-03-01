@@ -2,10 +2,10 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: 'Helvetica';
+  font-weight: 400;
+  letter-spacing: -0.015em;
 }
 #root {
   max-width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 2rem;
 }

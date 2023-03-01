@@ -5,6 +5,10 @@ import React from "react";
 export default function Header() {
   return (
     <div>
+      <ul>
+        <li>Home</li>
+        <li>Dashboard</li>
+      </ul>
     </div>
   );
 }

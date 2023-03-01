@@ -1,49 +1,188 @@
+@Main-color : #4FD1C5;
+@White-color: #FFFFFF;
+@Gray-color : #A0AEC0;
+@Black-color : #2D3748;
+
+//Switch
+@switch-width          : 36px;
+@switch-height         : 18.5px;
+@slider-transition     : 0.4s;
+@slider-bg-color       : #ccc;
+@slider-checked-color  : #4FD1C5;
+@slider-focus-shadow   : 0 0 1px @slider-checked-color;
+@slider-knob-size      : 13.5px;
+@slider-knob-bg-color  : white;
+@slider-knob-transition: 0.4s;
+@slider-border-radius  : 34px;
+
+
 .login-container {
-  // position: absolute;
-  width         : 353px;
-  height        : 445px;
-  left          : 466px;
-  top           : 282px;
-  border        : 1px;
-  display       : flex;
-  flex-direction: column;
-
-  row-gap: 20px;
+  width          : 100%;
+  height         : fit-content;
+  display        : flex;
+  justify-content: center;
 }
 
-.login-form {
-  max-height: fit-content;
+.login-box {
+  display        : flex;
+  flex-direction : column;
+  width          : 353px;
+  min-height     : 445px;
+  justify-content: space-between;
 }
+
+.intro-box {
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-between;
+
+  &__intro-text {
+    font-weight: bold;
+    font-size  : 34px;
+    color      : #4FD1C5;
+  }
+
+  &__intro-message {
+    color    : @Gray-color;
+    font-size: 14px;
+    margin-top: -25px;
+  }
+}
+
 
 .social-account-option {
   display        : flex;
-  width          : 100%;
   justify-content: center;
 
-  .social-link {}
+  /* Remove empty .social-link selector */
 }
 
 .input-box {
   display       : flex;
   flex-direction: column;
-  gap           : 4px;
+  gap           : 12px;
 
   .input-field {
-    display       : flex;
-    flex-direction: column;
+    display  : flex;
+    flex-flow: column wrap;
+    gap      : 6px;
+
+    label {
+      font-size: 14px;
+      color: @Black-color;
+    }
+
+    input {
+      display      : flex;
+      flex-flow    : row wrap;
+      align-items  : center;
+      padding      : 0px 20px;
+      border-radius: 15px;
+      font-size    : 14px;
+      height       : 50px;
+      background   : #FFFFFF;
+      border       : 1px solid #E2E8F0;
+    }
+
+    input::placeholder {
+      color: @Gray-color;
+    }
   }
 }
 
-.remember-me-box {
-  display: flex;
-  gap    : 4px;
-
-  .remember-me-btn {
-    max-width: fit-content;
+.remember-me {
+  display    : flex;
+  gap        : 10px;
+  align-items: center;
+  font-size  : 12px;
+  
+  p{
+    color: @Black-color;
   }
 
-  .login-btn {
-    display  : flex;
-    max-width: fit-content;
+  &__switch {
+    position: relative;
+    display : inline-block;
+    width   : @switch-width;
+    height  : @switch-height;
+  
+    input {
+      display: none;
+    }
+  
+    .slider {
+      position        : absolute;
+      cursor          : pointer;
+      top             : 0;
+      left            : 0;
+      right           : 0;
+      bottom          : 0;
+      background-color: @slider-bg-color;
+      transition      : @slider-transition;
+  
+      &:before {
+        position        : absolute;
+        content         : "";
+        height          : @slider-knob-size;
+        width           : @slider-knob-size;
+        left            : 2.5px;
+        bottom          : 2.5px;
+        background-color: @slider-knob-bg-color;
+        transition      : @slider-knob-transition;
+      }
+  
+      &.round {
+        border-radius: @slider-border-radius;
+  
+        &:before {
+          border-radius: 50%;
+        }
+      }
+    }
+  
+    input:checked+.slider {
+      background-color: @slider-checked-color;
+  
+      &:before {
+        transform: translateX(17px);
+      }
+    }
+  
+    input:focus+.slider {
+      box-shadow: @slider-focus-shadow;
+    }
   }
+}
+
+.login-btn {
+  display         : flex;
+  align-self      : center;
+  background-color: @Main-color;
+  border          : none;
+  color           : @White-color;
+  border-radius   : 12px;
+  width           : 350px;
+  height          : 40px;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+}
+
+.login-btn:hover {
+  background-color: darken(@Main-color, 5%);
+  cursor          : pointer;
+}
+
+.create-account {
+  display        : flex;
+  justify-content: center;
+  font-size: 14px;
+  gap            : 4px;
+  color: @Gray-color ;
+
+  .sign-up {
+    color          : @Main-color;
+    text-decoration: none;
+  }
+
 }
