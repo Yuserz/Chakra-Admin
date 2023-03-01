@@ -1,7 +1,8 @@
 .login-container {
   width: 100%;
-  height: fit-content;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 .login-box {
@@ -14,9 +15,9 @@
 .intro-box {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .intro-box__intro-text {
+  margin: 0px;
   font-weight: bold;
   font-size: 34px;
   color: #4FD1C5;
@@ -24,12 +25,10 @@
 .intro-box__intro-message {
   color: #A0AEC0;
   font-size: 14px;
-  margin-top: -25px;
 }
 .social-account-option {
   display: flex;
   justify-content: center;
-  /* Remove empty .social-link selector */
 }
 .input-box {
   display: flex;

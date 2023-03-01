@@ -1,0 +1,51 @@
+@Main-color  : #4FD1C5;
+@White-color : #FFFFFF;
+@Gray-color  : #A0AEC0;
+@Black-color : #2D3748;
+
+
+.footer-container {
+    position       : absolute;
+    margin         : 10px 0px;
+    padding        : 0;
+    bottom         : 0px;
+    display        : flex;
+    max-width      : 1044.5px;
+    width          : 100%;
+    justify-content: space-between;
+    justify-items  : center;
+    align-self     : center;
+    font-size      : 12px;
+    height         : 20px;
+    
+
+    .site-info {
+        display   : flex;
+        width     : fit-content;
+        color     : @Gray-color;
+        gap       : 4px;    
+        justify-items:center;
+
+
+        .site-brand {
+            font-weight: bold;
+            text-align: end;
+            color: @Main-color;
+            display:flex;
+            height: fit-content;
+          
+        }
+    }
+
+    .footer-nav {
+        display      : flex;
+        justify-items: center;
+        gap          : 52px;
+        width        : fit-content;
+
+        a {
+            text-decoration: none;
+            color          : @Gray-color;
+        }
+    }
+}
