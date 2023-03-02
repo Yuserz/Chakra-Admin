@@ -1,4 +1,5 @@
 import "../Styles/login.less";
+import TextBox from "./TextBox.jsx";
 
 export default function LoginForm() {
   return (
@@ -9,19 +10,26 @@ export default function LoginForm() {
           Enter your email and password to sign in
         </p>
       </div>
-
       <div className="input-box">
-        <div className="input-field">
-          <label htmlFor="Password">Password</label>
-          <input placeholder="Your password" name="Password" type="password" />
-        </div>
+        <label htmlFor="Email">Email</label>
+        <TextBox
+          type="text"
+          name="email"
+          id="exampleFormControlInput2"
+          placeholder="Your email address"
+          required
+        />
       </div>
 
       <div className="input-box">
-        <div className="input-field">
-          <label htmlFor="Email">Email</label>
-          <input placeholder="Your email address" name="Email" type="text" />
-        </div>
+        <label htmlFor="Password">Password</label>
+        <TextBox
+          type="password"
+          name="password"
+          id="exampleFormControlInput2"
+          placeholder="Your password"
+          required
+        />
       </div>
 
       <div className="remember-me">

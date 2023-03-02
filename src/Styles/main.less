@@ -1,3 +1,8 @@
+@Main-color  : #4FD1C5;
+@White-color : #FFFFFF;
+@Gray-color  : #A0AEC0;
+@Dark-color  : #2D3748;
+
 body {
   margin : 0;
   padding: 0;
@@ -10,4 +15,34 @@ body {
 
 #root {
   max-width: 100%;
+}
+
+.input-field {
+  display  : flex;
+  flex-flow: column wrap;
+  gap      : 6px;
+
+
+
+}
+
+label {
+  font-size: 14px;
+  color    : @Dark-color;
+}
+
+input {
+  display      : flex;
+  flex-flow    : row wrap;
+  align-items  : center;
+  padding      : 0px 20px;
+  border-radius: 15px;
+  font-size    : 14px;
+  height       : 50px;
+  background   : #FFFFFF;
+  border       : 1px solid #E2E8F0;
+}
+
+input::placeholder {
+  color: @Gray-color;
 }
