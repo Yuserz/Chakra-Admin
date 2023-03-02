@@ -1,0 +1,90 @@
+@Main-color : #4fd1c5;
+@White-color: #ffffff;
+@Gray-color : #a0aec0;
+@Dark-color : #2d3748;
+
+@Container-width: 55%;
+
+.header-container {
+  background-color: #ffffff;
+  position        : absolute;
+  z-index         : 2;
+  margin          : 10px 0px;
+  top             : 0px;
+  max-width       : @Container-width;
+  width           : 100%;
+  display         : flex;
+  align-self      : center;
+  height          : 70px;
+  background      : linear-gradient(112.83deg,
+      rgba(255, 255, 255, 0.82) 0%,
+      rgba(255, 255, 255, 0.8) 110.84%);
+  border         : 1.5px solid #ffffff;
+  box-shadow     : 0px 7px 23px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10.5px);
+  border-radius  : 15px;
+
+  .header-box {
+    width          : 100%;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    margin         : 0 15px;
+  }
+
+  .site-brand {
+    font-weight: bold;
+    text-align : end;
+    color      : @Dark-color;
+    font-size  : 14px;
+    display    : flex;
+    height     : fit-content;
+    gap        : 12px;
+    display    : flex;
+    align-items: center;
+  }
+
+  .header-nav {
+    font-size: 10px;
+    display  : flex;
+
+    justify-content: space-between;
+    width          : 350px;
+    height         : fit-content;
+    font-weight    : bold;
+    text-transform : uppercase;
+  }
+
+  .nav-btn {
+    display      : flex;
+    gap          : 4px;
+    justify-items: center;
+    align-items  : center;
+    height       : 24px;
+    padding      : 0px 8px;
+
+    a {
+      text-decoration: none;
+      color          : @Dark-color;
+      display        : inline-block;
+      text-align     : center;
+      width          : 100%;
+      height         : fit-content;
+    }
+
+    img {
+      margin-bottom: 2px;
+    }
+  }
+
+  .download-btn {
+    font-size    : 10px;
+    font-weight  : 700;
+    color        : @White-color;
+    height       : 35px;
+    width        : 150px;
+    background   : linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%);
+    border-radius: 34.5px;
+    cursor       : pointer;
+  }
+}
