@@ -1,9 +1,10 @@
-import "../Styles/login.less";
+import "../Styles/loginSignUp.less";
 import TextBox from "./TextBox.jsx";
+import React from "react";
 
 export default function LoginForm() {
   return (
-    <div className="login-box">
+    <div className="box login">
       <div className="intro-box">
         <p className="intro-box__intro-text">Welcome Back</p>
         <p className="intro-box__intro-message">
@@ -41,12 +42,12 @@ export default function LoginForm() {
       </div>
 
       <div>
-        <button className="login-btn">SIGN IN</button>
+        <button className="confirm-btn">SIGN IN</button>
       </div>
 
-      <div className="create-account">
+      <div className="account">
         Don't have an account?{" "}
-        <a href="" className="sign-up">
+        <a href="" className="sign-in-up">
           Sign up
         </a>
       </div>

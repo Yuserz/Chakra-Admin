@@ -1,7 +1,7 @@
 @Main-color  : #4FD1C5;
 @White-color : #FFFFFF;
 @Gray-color  : #A0AEC0;
-@Dark-color : #2D3748;
+@Dark-color  : #2D3748;
 
 //Remember me toggle switch
 @switch-width          : 36px;
@@ -14,10 +14,13 @@
 @slider-knob-bg-color  : white;
 @slider-knob-transition: 0.4s;
 @slider-border-radius  : 34px;
-@login-box-margin-left: 22.5%;
+@login-box-margin-left : 22.5%;
 
+p{
+  margin: 0;
+}
 
-.sing-up-container {
+.container {
   width          : 100%;
   height         : 100vh;
   display        : flex;
@@ -26,20 +29,98 @@
   position       : relative;
 }
 
-.sign-up-box {
-  position       : absolute;
-  left           : @login-box-margin-left;
+&.box {
   display        : flex;
   flex-direction : column;
-  width          : 353px;
-  min-height     : 445px;
   justify-content: space-between;
 }
 
-.intro-box {
+& {
+  .register-text {
+    height     : fit-content;
+    width      : fit-content;
+    place-self : center;
+    font-size  : 18px;
+    color      : @Dark-color;
+    font-weight: bold;
+  }
+
+  .or-text {
+    place-self: center;
+    font-size : 18px;
+    color     : @Gray-color;
+  }
+}
+
+&.login {
+  width   : 353px;
+  height  : 445px;
+  left    : @login-box-margin-left;
+  position: absolute;
+}
+
+.container-sign-up {
+  width          : 100%;
+  height         : 100vh;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  position: relative;
+
+  .bg-image {
+    position       : absolute;
+    justify-content: center;
+    top            : 24px;
+    // left           : 24px;
+    // right          : 24px;
+    width          : 97%;
+    height         : 40%;
+    overflow       : hidden;
+    border-radius: 15px;
+
+    img {
+      width: fit-content;
+    }
+  }
+
+  .bg-padding {
+    padding         : 30px;
+    width           : fit-content;
+    height          : 100%;
+    max-height      : 520px;
+    z-index         : 2;
+    background-color: @White-color;
+    border-radius   : 15px;
+    box-shadow      : 0px 7px 23px rgba(0, 0, 0, 0.05);
+    border-radius   : 15px;
+    margin-top      : 5%;
+  }
+}
+
+&.sign-up {
+  display        : flex;
+  justify-content: space-between;
+  left  : 35%;
+  width : 320px;
+  height: 100%;
+
+  .register-text {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .or-text {
+    margin: 20px 0px 0px 0px;
+  }
+}
+
+
+.intro-box() {
   display       : flex;
   flex-direction: column;
+}
 
+.intro-box {
+  .intro-box();
 
   &__intro-text {
     margin     : 0px;
@@ -54,9 +135,40 @@
   }
 }
 
+.social-account {
+  margin         : 0;
+  width          : 100%;
+  padding        : 0;
+  display        : flex;
+  height         : fit-content;
+  flex-direction : column;
+  justify-content: space-between;
+
+}
+
 .social-account-option {
   display        : flex;
-  justify-content: center;
+  gap            : 4px;
+  place-self     : center;
+  width          : 255px;
+  justify-content: space-between;
+
+  .social-link {
+    width          : 75px;
+    height         : 75px;
+    border         : 1px solid #E2E8F0;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    border-radius  : 15px;
+
+    img {
+
+      width : 31px;
+      height: fit-content;
+
+    }
+  }
 }
 
 .input-box {
@@ -64,32 +176,7 @@
   flex-direction: column;
   gap           : 12px;
 
-  .input-field {
-    display  : flex;
-    flex-flow: column wrap;
-    gap      : 6px;
 
-    label {
-      font-size: 14px;
-      color    : @Dark-color;
-    }
-
-    input {
-      display      : flex;
-      flex-flow    : row wrap;
-      align-items  : center;
-      padding      : 0px 20px;
-      border-radius: 15px;
-      font-size    : 14px;
-      height       : 50px;
-      background   : #FFFFFF;
-      border       : 1px solid #E2E8F0;
-    }
-
-    input::placeholder {
-      color: @Gray-color;
-    }
-  }
 }
 
 .remember-me {
@@ -156,33 +243,33 @@
   }
 }
 
-.login-btn {
+.confirm-btn {
   display         : flex;
   align-self      : center;
   background-color: @Main-color;
   border          : none;
   color           : @White-color;
   border-radius   : 12px;
-  width           : 350px;
+  width           : 100%;
   height          : 40px;
   display         : flex;
   justify-content : center;
   align-items     : center;
 }
 
-.login-btn:hover {
+.confirm-btn:hover {
   background-color: darken(@Main-color, 5%);
   cursor          : pointer;
 }
 
-.create-account {
+.account {
   display        : flex;
   justify-content: center;
   font-size      : 14px;
   gap            : 4px;
   color          : @Gray-color ;
 
-  .sign-up {
+  .sign-in-up {
     color          : @Main-color;
     text-decoration: none;
   }

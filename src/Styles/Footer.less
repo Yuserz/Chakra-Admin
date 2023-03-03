@@ -51,3 +51,26 @@
         }
     }
 }
+
+// Define the height of the footer
+@footer-height: 50px;
+
+// Style for the footer
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: @footer-height;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(@footer-height);
+}
+
+// Show the footer when scrolled down
+.footer--show {
+  transform: translateY(0);
+}

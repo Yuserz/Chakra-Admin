@@ -1,0 +1,61 @@
+@Main-color     : #4FD1C5;
+@White-color    : #FFFFFF;
+@Bg-white-color : #F8F9FA;
+@Gray-color     : #A0AEC0;
+@Dark-color     : #2D3748;
+
+
+.big-cards {
+    width          : 100%;
+    min-height     : 50px;
+    display        : flex;
+    justify-content: space-between;
+    gap            : 20px;
+
+    .left {
+        width        : 60%;
+        background   : #FFFFFF;
+        box-shadow   : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+        border-radius: 15px;
+        padding      : 17.5px 21px;
+
+        h6 {
+            font-size: 12px;
+            color    : @Gray-color;
+            margin-bottom: 3px;
+        }
+
+        h4 {
+            font-size: 18px;
+            color    : @Dark-color;
+            margin-bottom: 6px;
+        }
+
+        p {
+            font-size: 14px;
+            color    : @Gray-color;
+            margin-bottom: 141px;
+        }
+        .link-container{
+            width: fit-content;
+            height: fit-content;
+
+            a{
+                font-size: 10px;
+                color: @Dark-color;
+                font-weight: bold;
+            }
+        }
+        // .brand-img{
+            
+        // }
+    }
+
+    .right {
+        padding      : 17.5px 21px;
+        width        : 40%;
+        background   : #FFFFFF;
+        box-shadow   : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+        border-radius: 15px;
+    }
+}

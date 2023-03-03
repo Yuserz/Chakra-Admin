@@ -1,17 +1,21 @@
-@Main-color  : #4FD1C5;
-@White-color : #FFFFFF;
-@Gray-color  : #A0AEC0;
-@Dark-color  : #2D3748;
+@Main-color     : #4FD1C5;
+@White-color    : #FFFFFF;
+@Bg-white-color : #F8F9FA;
+@Gray-color     : #A0AEC0;
+@Dark-color     : #2D3748;
+
+*{
+  margin        : 0;
+  padding       : 0;
+  border        : 0;
+}
 
 body {
-  margin : 0;
-  padding: 0;
-  border : 0;
-
   //font style
   font-family   : 'Helvetica';
   letter-spacing: -0.015em;
 }
+
 
 #root {
   max-width: 100%;
@@ -23,12 +27,12 @@ body {
   gap      : 6px;
 
 
-
 }
 
 label {
   font-size: 14px;
   color    : @Dark-color;
+  width    : fit-content;
 }
 
 input {
@@ -46,3 +50,33 @@ input {
 input::placeholder {
   color: @Gray-color;
 }
+
+.container {
+  width           : 100%;
+  height          : 100vh;
+  display         : flex;
+  background-color: @Bg-white-color;
+}
+
+
+.side-nav {
+  width : 14%;
+  height: 100%;
+}
+
+.main {
+  width : 100%;
+  height: 100%;
+
+  .body {
+    height          : max-content;
+    width           : 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+  }
+
+}
+

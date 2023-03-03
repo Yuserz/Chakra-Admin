@@ -1,4 +1,5 @@
 import "../Styles/main.less";
+import React from "react";
 
 export default function TextBox(props) {
 
