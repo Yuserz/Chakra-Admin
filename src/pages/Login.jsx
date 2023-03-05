@@ -7,7 +7,7 @@ import React from "react";
 
 export default function Login() {
   return (
-    <div className="container">
+    <div className="login-container">
       <Header />
       <img className="login-background-image" src={backgroundImage} alt="" />
       <LoginForm />

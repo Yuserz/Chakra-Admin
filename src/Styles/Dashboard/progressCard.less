@@ -1,0 +1,111 @@
+@Main-color     : #4FD1C5;
+@White-color    : #FFFFFF;
+@Bg-white-color : #F8F9FA;
+@Gray-color     : #A0AEC0;
+@Dark-color     : #2D3748;
+@Green-color    : #48BB78;
+
+
+.progress-container {
+    width          : 100%;
+    min-height     : max-content;
+    display        : flex;
+    justify-content: space-between;
+    gap            : 24px;
+
+
+    .card {
+        // height       : 519px;
+        background   : #FFFFFF;
+        box-shadow   : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+        border-radius: 15px;
+        padding      : 15px;
+
+        .left-top {
+            width          : 100%;
+            justify-content: space-between;
+            display        : flex;
+        }
+    }
+
+    .left {
+        width: 70%;
+    }
+
+    .right {
+        width : 30%;
+        height: max-content;
+
+        .order-progress {
+            display       : flex;
+            margin-top    : 35px;
+            flex-direction: column;
+            gap: 5.5px;
+
+            .row {
+                display        : flex;
+                justify-content: space-between;
+                width          : 70%;
+                height         : 61px;
+            }
+
+            .left {
+                display       : flex;
+                width         : 10%;
+                flex-direction: column;
+                margin        : 0px;
+                align-items: center;
+
+                img {
+                    width : 16px;
+                    height: 16px;
+                }
+
+                .line {
+                    margin-top: 6.5px;
+                    height: 100%;
+                    border: 2px solid #E2E8F0;
+                    place-self:center;
+                }
+            }
+
+            .right {
+                width: 80%;
+
+                .title {
+                    font-size  : 14px;
+                    font-weight: bold;
+                    color      : @Dark-color;
+                }
+
+                .date {
+                    font-size  : 12px;
+                    font-weight: bold;
+                    color      : @Gray-color;
+                }
+            }
+
+        }
+
+    }
+}
+
+.box {
+
+    .header {
+        font-size    : 18px;
+        font-weight  : bold;
+        color        : @Dark-color;
+        margin-bottom: 6px;
+    }
+
+    .text {
+        font-size: 14px;
+        color    : @Gray-color;
+
+        span {
+            font-weight: bold;
+            color      : @Green-color;
+        }
+    }
+}

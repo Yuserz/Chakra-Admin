@@ -1,6 +1,7 @@
 import "../Styles/main.less";
 import "../Styles/Dashboard/analytics.less";
 import React from "react";
+import icons from "../assets/assets"
 
 export default function Analytics() {
   return (
@@ -14,7 +15,7 @@ export default function Analytics() {
           </div>
         </div>
         <div className="icon">
-          <img src="" alt="icon" />
+          <img src={icons.wallet} alt="icon" />
         </div>
       </div>
       <div className="card">
@@ -26,7 +27,7 @@ export default function Analytics() {
           </div>
         </div>
         <div className="icon">
-          <img src="" alt="icon" />
+          <img src={icons.globe} alt="icon" />
         </div>
       </div>
       <div className="card">
@@ -38,7 +39,7 @@ export default function Analytics() {
           </div>
         </div>
         <div className="icon">
-          <img src="" alt="icon" />
+          <img src={icons.client} alt="icon" />
         </div>
       </div>
       <div className="card">
@@ -50,7 +51,7 @@ export default function Analytics() {
           </div>
         </div>
         <div className="icon">
-          <img src="" alt="icon" />
+          <img src={icons.cart} alt="icon" />
         </div>
       </div>
     </div>

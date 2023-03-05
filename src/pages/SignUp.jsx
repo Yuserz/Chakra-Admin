@@ -1,4 +1,4 @@
-import SignUpForm from "../components/SingUpForm.jsx";
+import SignUpForm from "../components/SignUpForm.jsx";
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import backgroundImage from "../assets/images/Image.png";

@@ -7,55 +7,131 @@
 
 .big-cards {
     width          : 100%;
-    min-height     : 50px;
+    height         : 291px;
     display        : flex;
     justify-content: space-between;
-    gap            : 20px;
+    gap            : 24px;
+
 
     .left {
-        width        : 60%;
-        background   : #FFFFFF;
-        box-shadow   : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
-        border-radius: 15px;
-        padding      : 17.5px 21px;
+        width          : 60%;
+        background     : #FFFFFF;
+        box-shadow     : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+        border-radius  : 15px;
+        padding        : 17.5px 21px;
+        display        : flex;
+        justify-content: space-between;
+
+        .context {
+            width: 45%;
+        }
+
 
         h6 {
-            font-size: 12px;
-            color    : @Gray-color;
+            font-size    : 12px;
+            color        : @Gray-color;
             margin-bottom: 3px;
         }
 
         h4 {
-            font-size: 18px;
-            color    : @Dark-color;
+            font-size    : 18px;
+            color        : @Dark-color;
             margin-bottom: 6px;
         }
 
         p {
-            font-size: 14px;
-            color    : @Gray-color;
+            font-size    : 14px;
+            color        : @Gray-color;
             margin-bottom: 141px;
         }
-        .link-container{
-            width: fit-content;
-            height: fit-content;
 
-            a{
-                font-size: 10px;
-                color: @Dark-color;
+        .link-container {
+            width      : fit-content;
+            height     : fit-content;
+            display    : flex;
+            align-items: center;
+            gap        : 4px;
+            cursor     : pointer;
+
+            a {
+                font-size  : 10px;
+                color      : @Dark-color;
                 font-weight: bold;
             }
         }
-        // .brand-img{
-            
-        // }
+
+        .brand-img {
+            width      : max-content;
+            display    : flex;
+            align-items: center;
+
+            img {
+                width     : 100%;
+                place-self: center;
+            }
+        }
     }
 
     .right {
+        position     : relative;
         padding      : 17.5px 21px;
         width        : 40%;
         background   : #FFFFFF;
         box-shadow   : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
         border-radius: 15px;
+
+        .box {
+            display         : flex;
+            overflow        : hidden;
+            width           : 100%;
+            background-image: url('/assets/images/bigCardBG.png');
+            width           : 100%;
+            border-radius   : 15px;
+            height          : 100%;
+
+            div {
+                border-radius: 15px;
+                overflow     : hidden;
+            }
+
+            .context {
+                padding : 15px;
+                position: relative;
+                max-width: 100%;
+                // white-space  : nowrap;
+            }
+
+            h4 {
+                font-size    : 18px;
+                margin-bottom: 6px;
+                color        : @White-color;
+            }
+
+            p {
+                max-width: 90%;
+                min-width: 60%;
+                font-size    : 14px;
+                margin-bottom: 128.5px;
+                color        : @White-color;
+            }
+
+            .link-container {
+                width      : fit-content;
+                height     : fit-content;
+                display    : flex;
+                align-items: center;
+                gap        : 4px;
+                cursor     : pointer;
+
+                a {
+                    font-size  : 10px;
+                    color      : @White-color;
+                    font-weight: bold;
+                }
+            }
+        }
+
+
+
     }
 }

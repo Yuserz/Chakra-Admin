@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="footer-container">
       <div className="site-info">
-        © 2022, Made with ❤️ by <span className="site-brand">Tektorch </span>{" "}
+        © 2022, Made with ❤️ by <span className="site-brand">Tektorch </span>
         for a better web
       </div>
       <div className="footer-nav">
