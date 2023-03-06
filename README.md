@@ -1,13 +1,15 @@
-# chakra
+<h1>Frontend Assessment</h1>
 
-Prerequisite
+<h3>React js, Vite Framework and LESS css </h3>
 
-Node Js(Preferably latest) 
+<h1>Prerequisite</h1>
 
-INSTALL DEPENDENCIES
+Node Js
+
+<h2>INSTALL DEPENDENCIES</h2>
 
 `npm install`
 
-HOW TO RUN
+<h2>START</h2>
 
 `npm run dev`
