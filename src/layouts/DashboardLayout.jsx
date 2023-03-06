@@ -3,6 +3,9 @@ import SideNav from "../components/SideNav";
 import Footer from "../components/Footer";
 import Header from "../components/HeaderSigned";
 import "../Styles/main.less";
+import "../Styles/footer.less";
+import "../Styles/header.less";
+
 
 export default function DashboardLayout({ children }) {
   return (

@@ -48,7 +48,7 @@ export default function LoginForm() {
 
         <div className="account">
           Don't have an account?{" "}
-          <a href="" className="sign-in-up">
+          <a href="/signup" className="sign-in-up">
             Sign up
           </a>
         </div>

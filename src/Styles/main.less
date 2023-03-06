@@ -15,7 +15,7 @@
 
 body {
   //font style
-
+  overflow: auto;
   //default font color
   color: @Dark-color;
 
@@ -61,8 +61,7 @@ label {
 
 .container {
   width           : 100%;
-  height          : 100vh;
-  overflow-y      : auto;
+  height          : 100%;
   display         : flex;
   background-color: @Bg-white-color;
 }
@@ -70,12 +69,14 @@ label {
 //Dashboard
 .main {
   width         : 86%;
-  height        : max-content;
+  height        : 100vh;
   padding-left  : 27px;
   padding-right : 22px;
   display       : flex;
   flex-direction: column;
   gap           : 24px;
+  overflow-y: auto;
+
 }
 
 table {
@@ -163,3 +164,4 @@ table {
     padding-bottom: 12.5px;
   }
 }
+

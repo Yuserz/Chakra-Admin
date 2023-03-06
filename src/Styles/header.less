@@ -58,23 +58,26 @@
   border-radius: 15px;
 }
 
-.header-box {
+&.header-box {
   width          : 100%;
   display        : flex;
   justify-content: space-between;
   align-items    : center;
   margin         : 0 15px;
+  
+
+  .site-brand {
+    margin-top: 2px;
+    font-weight   : bold;
+    font-size     : 14px;
+    height        : fit-content;
+    gap           : 12px;
+    align-items   : center;
+    display       : flex;
+  }
+  
 }
 
-.site-brand {
-  font-weight   : bold;
-  text-align    : end;
-  font-size     : 14px;
-  height        : fit-content;
-  gap           : 12px;
-  align-items   : center;
-  display       : flex;
-}
 
 .header-nav {
   font-size      : 10px;

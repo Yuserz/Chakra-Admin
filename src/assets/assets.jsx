@@ -1,10 +1,15 @@
 import brandLogo from "./icons/brand-logo.svg";
+import brandLogoWhite from "./icons/brand-logoWhite.svg";
 import dashboard from "./icons/dashboard.svg";
+import dashboardWhite from "./icons/packageWhite.svg";
 import profile from "./icons/profile.svg";
+import profileWhite from "./icons/profileWhite.svg";
 import profile2 from "./icons/profile2.svg";
 import profile3 from "./icons/profileSignedHeader.svg";
 import signIn from "./icons/sign-in.svg";
+import signInWhite from "./icons/sign-inWhite.svg";
 import signUp from "./icons/sign-up.svg";
+import signUpWhite from "./icons/sign-upWhite.svg";
 import facebook from "./icons/facebook.svg";
 import apple from "./icons/apple.svg";
 import google from "./icons/google.svg";
@@ -54,12 +59,17 @@ export default {
   user,
   items,
   brandLogo,
+  brandLogoWhite,
   dashboard,
+  dashboardWhite,
   profile,
+  profileWhite,
   profile2,
   profile3,
   signIn,
+  signInWhite,
   signUp,
+  signUpWhite,
   facebook,
   apple,
   google,

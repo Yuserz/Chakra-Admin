@@ -4,7 +4,7 @@ import icons from "../assets/assets";
 
 export default function HeaderSigned() {
   return (
-    <header className="header-container">
+    <header className="header-container-signed">
       <div className="header-box">
         <div className="box">
           <div className="left">

@@ -76,7 +76,7 @@ export default function SignUpForm() {
 
         <div className="account">
           Already have an account?{" "}
-          <a href="" className="sign-in-up">
+          <a href="/" className="sign-in-up">
             Sign in
           </a>
         </div>

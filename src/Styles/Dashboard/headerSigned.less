@@ -4,14 +4,14 @@
 @Gray2-color : #718096;
 @Dark-color  : #2d3748;
 
-.header-container {
+.header-container-signed {
   margin       : 10px 0px;
   width        : 100%;
   display      : flex;
   height       : fit-content;
   margin-top   : 22.5px;
   margin-bottom: 5px;
-
+  
 
   .header-box {
     width          : 100%;
@@ -19,6 +19,15 @@
     justify-content: space-between;
     margin         : 0 15px;
     flex-direction : column;
+    align-items    : flex-start;
+    
+    &.current-page {
+      text-align : left;
+      font-weight: bold;
+      font-size  : 14px;
+      width      : fit-content;
+    }
+
   }
 
   .box {
@@ -94,9 +103,4 @@
     }
   }
 
-  .current-page {
-    font-weight: bold;
-    font-size  : 14px;
-    width      : fit-content;
-  }
 }
