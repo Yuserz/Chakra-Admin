@@ -25,7 +25,7 @@ const rows = [
     email: "elaine@vandelay.com",
     function: "Manager",
     info: "Organization",
-    status: "Online",
+    status: "Offline",
     employed: "14/06/21",
     image: user2,
     action: "Edit",
@@ -55,7 +55,7 @@ const rows = [
     email: "elaine@vandelay.com",
     function: "Manager",
     info: "Organization",
-    status: "Online",
+    status: "Offline",
     employed: "14/06/21",
     image: user5,
     action: "Edit",
@@ -65,7 +65,7 @@ const rows = [
     email: "elaine@vandelay.com",
     function: "Manager",
     info: "Organization",
-    status: "Online",
+    status: "Offline",
     employed: "14/06/21",
     image: user6,
     action: "Edit",
@@ -102,9 +102,19 @@ export default function AuthorsTable() {
                 <p className="info">{row.info}</p>
               </div>
             </td>
-            <td align="left">{row.status}</td>
+            <td align="left">
+              <div
+                className={
+                  row.status === "Online" ? "status online" : "status offline"
+                }
+              >
+                {row.status}
+              </div>
+            </td>
             <td align="left">{row.employed}</td>
-            <td className="action" align="left">{row.action}</td>
+            <td className="action" align="left">
+              {row.action}
+            </td>
           </tr>
         ))}
       </tbody>

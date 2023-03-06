@@ -2,16 +2,16 @@
 @White-color    : #FFFFFF;
 @Bg-white-color : #F8F9FA;
 @Gray-color     : #A0AEC0;
-@Gray2-color     : #718096;
+@Gray2-color    : #718096;
 @Dark-color     : #2D3748;
 @Green-color    : #48BB78;
 
 
-.author-table-wrapper{
+.author-table-wrapper {
 
-    img{
-        width: 40px;
-        height: 40px;
+    img {
+        width        : 40px;
+        height       : 40px;
         border-radius: 12px;
     }
 
@@ -63,12 +63,31 @@
     .email {
         color      : #718096;
         font-weight: normal;
-        font-size: 14px;
+        font-size  : 14px;
     }
 
     .info {
         color      : #718096;
         font-weight: normal;
-        font-size: 14px;
+        font-size  : 14px;
+    }
+
+    .status {
+        width          : fit-content;
+        color          : @White-color;
+        width          : 65px;
+        height         : 25px;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        border-radius  : 8px;
+
+        &.online {
+            background-color: @Green-color;
+        }
+        
+        &.offline{
+            background-color: @Gray-color;
+        }
     }
 }
