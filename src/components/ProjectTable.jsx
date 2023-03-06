@@ -78,7 +78,7 @@ export default function ProjectTable() {
             <td>
               <div className="memberImg">
                 {row.members.map((member, index) => (
-                  <div className="member-img">
+                  <div key={index} className="member-img">
                     <div>
                       <img key={index} src={member} alt="" />
                     </div>

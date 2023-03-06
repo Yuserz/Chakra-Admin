@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/Dashboard/analyticsChart.less";
 import icons from "../assets/assets";
+import LineGraph from "../components/Graph/BarGraph";
 
 const data = [
   {
@@ -31,7 +32,9 @@ export default function AnalyticsChart() {
   return (
     <div className="analytics-charts">
       <div className="left">
-        <div className=" top chart"></div>
+        <div className=" top chart">
+        <LineGraph />
+        </div>
         <div className="box">
           <p className="header"> Active user</p>
           <p className="text">
@@ -62,7 +65,9 @@ export default function AnalyticsChart() {
             <span> ( +5 )</span> more in 2021
           </p>
         </div>
-        <div className="line-chart"></div>
+        <div className="line-chart">
+          
+        </div>
       </div>
     </div>
   );
