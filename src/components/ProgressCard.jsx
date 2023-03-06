@@ -2,6 +2,7 @@ import React from "react";
 import "../Styles/Dashboard/progressCard.less";
 import ProjectTable from "../components/ProjectTable";
 import OrderOverview from "../components/OrderOverview";
+import icons from "../assets/assets";
 
 export default function ProgressCard() {
   return (
@@ -13,13 +14,13 @@ export default function ProgressCard() {
               <p className="header">Projects</p>
               <p className="text">
                 <span>
-                  <img src="" alt="icon" /> 30 done
+                  <img src={icons.check} alt="icon" /> 30 done
                 </span>{" "}
                 this month
               </p>
             </div>
-            <div className="btn">
-              <img src="" alt="btn" />
+            <div className="right-top btn">
+              <img src={icons.moreBtn} alt="btn" />
             </div>
           </div>
           <div className="table">

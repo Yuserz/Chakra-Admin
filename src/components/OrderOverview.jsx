@@ -17,12 +17,26 @@ const orders = [
       date: "21 DEC 9:a PM",
       image: icons.blueCart
     },
+    {
+        title: "New card added for order #3210145",
+        date: "20 DEC 3:52 PM",
+        image: icons.walletOrange
+      },
+      {
+        title: "Unlock packages for Development",
+        date: "19 DEC 11:35 PM",
+        image: icons.box
+      },
+      {
+        title: "New order #9851258",
+        date: "18 DEC 4:41 PM",
+        image: icons.xd
+      },
   ];
 
 export default function OrderOverview() {
   return (
     <div className="card">
-      <div className="content-container"></div>
       <div className="box">
         <p className="header">Order Overview</p>
         <p className="text">

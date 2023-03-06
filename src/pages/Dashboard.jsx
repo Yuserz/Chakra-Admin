@@ -9,13 +9,10 @@ import React from "react";
 export default function Dashboard() {
   return (
     <DashboardLayout>
-      <div className="header"></div>
-      <div className="body">
-        <Analytics />
-        <BigCards />
-        <AnalyticsChart />
-        <ProgressCard />
-      </div>
+      <Analytics />
+      <BigCards />
+      <AnalyticsChart />
+      <ProgressCard />
     </DashboardLayout>
   );
 }

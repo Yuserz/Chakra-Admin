@@ -38,8 +38,15 @@ import user from "./icons/user.svg";
 import items from "./icons/items.svg";
 import setting from "./icons/setting.svg";
 import search from "./icons/search.svg";
+import check from "./icons/check.svg";
+import moreBtn from "./icons/moreBtn.svg";
+import rocket from "./icons/rocket.svg";
+
 
 export default {
+  rocket,
+  moreBtn,
+  check,
   search,
   setting,
   homeGreen,

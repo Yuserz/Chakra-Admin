@@ -2,6 +2,31 @@ import React from "react";
 import "../Styles/Dashboard/analyticsChart.less";
 import icons from "../assets/assets";
 
+const data = [
+  {
+    title: "User",
+    number: "32,984",
+    image: icons.home,
+  },
+  {
+    title: "Clicks",
+    number: "2,42m",
+    image: icons.rocket,
+  },
+
+  {
+    title: "Sales",
+    number: "2,400$",
+    image: icons.cart,
+  },
+
+  {
+    title: "Items",
+    number: 320,
+    image: icons.items,
+  },
+];
+
 export default function AnalyticsChart() {
   return (
     <div className="analytics-charts">
@@ -14,46 +39,20 @@ export default function AnalyticsChart() {
           </p>
         </div>
         <div className="bottom cards">
-          <div className="card">
-            <div className="top">
-              <div className="icon">
-                <img src={icons.home} alt="icon" />
+          {data.map((data, index) => (
+            <div className="row" key={index}>
+              <div className="card">
+                <div className="top">
+                  <div className="icon">
+                    <img src={data.image} alt="icon" />
+                  </div>
+                  <div className="label">{data.title}</div>
+                </div>
+                <div className="middle number">{data.number}</div>
+                <div className="bottom bar"></div>
               </div>
-              <div className="label">Users</div>
             </div>
-            <div className="middle number">1,000</div>
-            <div className="bottom bar"></div>
-          </div>
-          <div className="card">
-            <div className="top">
-              <div className="icon">
-                <img src={icons.wallet} alt="icon" />
-              </div>
-              <div className="label">Clicks</div>
-            </div>
-            <div className="middle number">1,000</div>
-            <div className="bottom bar"></div>
-          </div>
-          <div className="card">
-            <div className="top">
-              <div className="icon">
-                <img src={icons.cart} alt="icon" />
-              </div>
-              <div className="label">Sales</div>
-            </div>
-            <div className="middle number">1,000</div>
-            <div className="bottom bar"></div>
-          </div>
-          <div className="card">
-            <div className="top">
-              <div className="icon">
-                <img src={icons.items} alt="icon" />
-              </div>
-              <div className="label">Items</div>
-            </div>
-            <div className="middle number">1,000</div>
-            <div className="bottom bar"></div>
-          </div>
+          ))}
         </div>
       </div>
       <div className="right">

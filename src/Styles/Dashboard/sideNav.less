@@ -5,6 +5,7 @@
 @Dark-color     : #2D3748;
 @Green-color    : #48BB78;
 
+
 .side {
     width         : fit-content;
     display       : flex;
@@ -48,11 +49,32 @@
 }
 
 .nav {
+    text-decoration: none;
     display        : flex;
     flex-direction : column;
     width          : 219.5px;
     height         : 408px;
     justify-content: space-between;
+
+    .label {
+        font-size      : 12px;
+        color          : @Gray-color;
+        font-weight    : bold;
+        text-decoration: none;
+    }
+
+    .nav-link {
+        text-decoration: none;
+
+        .account-page {
+            font-weight: bold;
+            font-size: 12px;
+            color: @Dark-color;
+            margin-top: 14px;
+            text-transform: uppercase;
+          }
+    }
+
 
 
     .active {
@@ -88,11 +110,6 @@
             }
         }
 
-        .label {
-            font-size  : 12px;
-            color      : @Gray-color;
-            font-weight: bold;
-        }
     }
 
     .header {
@@ -106,18 +123,19 @@
 
 .help-box {
     width           : 100%;
+    margin-top: 25px;
     border-radius   : 15px;
     height          : 169.5px;
     background-image: url('/assets/images/needHelpBg.png');
     border-radius   : 15px;
     overflow        : hidden;
-    display: flex;
-    align-items: center;
+    display         : flex;
+    align-items     : center;
 
     .box {
         margin: 16px;
         height: max-content;
-        width: 100%;
+        width : 100%;
 
         .icon {
             display         : flex;
@@ -131,7 +149,7 @@
             box-shadow      : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
             border-radius   : 12px;
             width           : fit-content;
-            margin-bottom: 21.5px;
+            margin-bottom   : 21.5px;
 
             img {
                 width : 18px;
@@ -141,15 +159,17 @@
         }
 
         .middle {
-            color: @White-color;
+            color        : @White-color;
             margin-bottom: 8.5px;
 
-            .question{
-                font-size: 14px;
+            .question {
+                font-size  : 14px;
                 font-weight: bold;
             }
-            .text{
+
+            .text {
                 font-size: 12px;
+                color    : @White-color;
             }
         }
 
@@ -164,3 +184,4 @@
     }
 
 }
+

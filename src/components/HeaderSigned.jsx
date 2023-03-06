@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/headerSigned.less";
+import "../Styles/Dashboard/headerSigned.less"
 import icons from "../assets/assets";
 
 export default function HeaderSigned() {

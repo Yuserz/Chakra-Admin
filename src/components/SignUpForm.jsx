@@ -2,11 +2,11 @@ import "../Styles/loginSignUp.less";
 import TextBox from "./TextBox.jsx";
 import icons from "../assets/assets";
 import React from "react";
-import backgroundImage from "../assets/images/signUpBg.svg";
+
 
 export default function SignUpForm() {
   return (
-    <div className="bg-padding">
+    <div className="sign-up-form-container">
       <div className="box sign-up">
         <div className="social-account">
           <p className="register-text">Register with</p>

@@ -6,6 +6,29 @@
 @Green-color    : #48BB78;
 
 
+.progress-bar-container {
+    color         : @Main-color;
+    display       : flex;
+    flex-direction: column;
+    gap           : 4.5px;
+}
+
+.progress-bar {
+    width           : 80%;
+    height          : 3px;
+    border-radius   : 14px;
+    background-color: #ddd;
+}
+
+.progress-bar-fill {
+    height          : 100%;
+    border-radius   : 14px;
+    background-color: @Main-color;
+    line-height     : 3px;
+    color           : white;
+}
+
+
 .progress-container {
     width          : 100%;
     min-height     : max-content;
@@ -16,31 +39,44 @@
 
     .card {
         // height       : 519px;
-        background   : #FFFFFF;
-        box-shadow   : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
-        border-radius: 15px;
-        padding      : 15px;
+        background     : #FFFFFF;
+        box-shadow     : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+        border-radius  : 15px;
+        padding        : 20px;
+        height         : fit-content;
+        display        : flex;
+        flex-direction : column;
+        justify-content: space-between;
+        gap            : 34px;
 
         .left-top {
             width          : 100%;
             justify-content: space-between;
             display        : flex;
         }
+
+        .btn {
+            width : 20px;
+            height: 20px;
+        }
+
     }
 
     .left {
         width: 70%;
+
     }
 
     .right {
         width : 30%;
-        height: max-content;
+        height: 100%;
 
         .order-progress {
             display       : flex;
-            margin-top    : 35px;
+            height        : max-content;
             flex-direction: column;
-            gap: 5.5px;
+            gap           : 5.5px;
+            padding: 6px 0px;
 
             .row {
                 display        : flex;
@@ -54,7 +90,7 @@
                 width         : 10%;
                 flex-direction: column;
                 margin        : 0px;
-                align-items: center;
+                align-items   : center;
 
                 img {
                     width : 16px;
@@ -63,14 +99,18 @@
 
                 .line {
                     margin-top: 6.5px;
-                    height: 100%;
-                    border: 2px solid #E2E8F0;
-                    place-self:center;
+                    height    : 100%;
+                    border    : 2px solid #E2E8F0;
+                    place-self: center;
+                    border-radius: 4px;
                 }
             }
 
             .right {
                 width: 80%;
+                display: flex;
+                flex-direction: column;
+                gap: 4.5px;
 
                 .title {
                     font-size  : 14px;
@@ -91,7 +131,6 @@
 }
 
 .box {
-
     .header {
         font-size    : 18px;
         font-weight  : bold;
@@ -102,10 +141,15 @@
     .text {
         font-size: 14px;
         color    : @Gray-color;
+        display  : flex;
+        gap      : 4px;
 
         span {
             font-weight: bold;
             color      : @Green-color;
+            display    : flex;
+            align-items: center;
+            gap        : 4px;
         }
     }
 }

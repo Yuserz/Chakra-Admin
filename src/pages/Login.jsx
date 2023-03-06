@@ -1,17 +1,15 @@
-import LoginForm from "../components/LoginForm.jsx";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import "../Styles/loginSignUp.less";
-import backgroundImage from "../assets/images/Image.png";
 import React from "react";
+import LoginLayout from "../layouts/LoginLayout";
+import LoginForm from "../components/LoginForm.jsx";
+import loginBg from "../assets/images/loginBg.png"
 
 export default function Login() {
   return (
-    <div className="login-container">
-      <Header />
-      <img className="login-background-image" src={backgroundImage} alt="" />
-      <LoginForm />
-      <Footer />
-    </div>
+    <LoginLayout>
+      <div className="left-login"><LoginForm /></div>
+      <div className="bg-wrapper">
+        <div className="bg"><img src={loginBg} alt="" /></div>
+      </div>
+    </LoginLayout>
   );
 }

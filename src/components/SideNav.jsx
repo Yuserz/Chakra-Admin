@@ -1,9 +1,53 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../Styles/Dashboard/sideNav.less";
 import icons from "../assets/assets";
-import bgImage from "../assets/images/needHelpBg.png";
+
+const navItems = [
+  {
+    icon: icons.homeGreen,
+    label: "Dashboard",
+    path: "/dashboard",
+  },
+  {
+    icon: icons.table,
+    label: "Table",
+    path: "/Table",
+  },
+  {
+    icon: icons.card,
+    label: "Billing",
+    path: "/billing",
+  },
+  {
+    icon: icons.build,
+    label: "Items",
+    path: "/items",
+  },
+  {
+    header: true,
+    label: "Account Page",
+  },
+  {
+    icon: icons.profile2,
+    label: "Profile",
+    path: "/profile",
+  },
+  {
+    icon: icons.signIn2,
+    label: "Sign in",
+    path: "/sign-in",
+  },
+  {
+    icon: icons.signUp2,
+    label: "Sign up",
+    path: "/sign-up",
+  },
+];
 
 export default function SideNav() {
+  const location = useLocation();
+
   return (
     <div className="side">
       <div className="site-brand">
@@ -12,49 +56,24 @@ export default function SideNav() {
       <div className="line"></div>
       <div className="nav-help-container">
         <div className="nav">
-          <div className="nav-btn active">
-            <div className="icon">
-              <img src={icons.homeGreen} alt="icon" />
-            </div>
-            <div className="label">Dashboard</div>
-          </div>
-          <div className="nav-btn">
-            <div className="icon">
-              <img src={icons.table} alt="icon" />
-            </div>
-            <div className="label">Table</div>
-          </div>
-          <div className="nav-btn">
-            <div className="icon">
-              <img src={icons.card} alt="icon" />
-            </div>
-            <div className="label">Billing</div>
-          </div>
-          <div className="nav-btn">
-            <div className="icon">
-              <img src={icons.build} alt="icon" />
-            </div>
-            <div className="label">Items</div>
-          </div>
-          <div className="header">Account Page</div>
-          <div className="nav-btn">
-            <div className="icon">
-              <img src={icons.profile2} alt="icon" />
-            </div>
-            <div className="label">Profile</div>
-          </div>
-          <div className="nav-btn">
-            <div className="icon">
-              <img src={icons.signIn2} alt="icon" />
-            </div>
-            <div className="label">Sign in</div>
-          </div>
-          <div className="nav-btn">
-            <div className="icon">
-              <img src={icons.signUp2} alt="icon" />
-            </div>
-            <div className="label">Sign up</div>
-          </div>
+          {navItems.map((item, index) => (
+            <Link key={index} to={item.path} className="nav-link">
+              <div
+                className={`nav-btn ${
+                  location.pathname === item.path ? "active" : ""
+                }`}
+              >
+                {item.icon && (
+                  <div className="icon">
+                    <img src={item.icon} alt="icon" />
+                  </div>
+                )}
+                <div className={`label ${item.header ? "account-page" : ""}`}>
+                  {item.label}
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
         <div className="help-box">
           <div className="box">

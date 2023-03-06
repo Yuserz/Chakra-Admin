@@ -16,19 +16,124 @@
 @slider-border-radius  : 34px;
 @login-box-margin-left : 22.5%;
 
-p{
-  margin: 0;
+//sign in
+.sign-up__wrapper {
+  width         : 100%;
+  height        : 100%;
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+
+  .sign-up-main {
+    display        : flex;
+    width          : 100%;
+    height         : 100vh;
+    justify-content: space-between;
+    flex-direction : column;
+    align-items    : center;
+    position       : relative;
+    padding-bottom : 100px;
+  }
+
+  .bg-image {
+    position        : relative;
+    min-height      : 520px;
+    width           : 100%;
+    // overflow: hidden;
+    background-image: url('../assets/images/signUpBg.png');
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+
+    .text {
+      text-align: center;
+      width     : fit-content;
+      height    : fit-content;
+      margin-top: -15%;
+      place-self: center;
+
+      .top {
+        font-size  : 32px;
+        font-weight: bold;
+        color      : @White-color;
+      }
+
+      .bottom {
+        font-size: 14px;
+        color    : @White-color;
+        width    : 333px;
+      }
+
+    }
+
+  }
+
+  .sign-up-form-container {
+    padding         : 30px 0px;
+    width           : 452.5px;
+    height          : 520px;
+    background-color: @White-color;
+    border-radius   : 15px;
+    box-shadow      : 0px 7px 23px rgba(0, 0, 0, 0.05);
+    border-radius   : 15px;
+    margin-top      : 5%;
+    top             : 18%;
+    position        : absolute;
+    display         : flex;
+    justify-content : center;
+  }
+
 }
 
-.login-container {
+
+
+//login wrapper
+.wrapper {
+  display       : flex;
+  width         : 100%;
+  height        : 100vh;
+  flex-direction: column;
+
+}
+
+.login-main {
+  display        : flex;
+  width          : max-content;
+  height         : max-content;
+  display        : flex;
   width          : 100%;
   height         : 100vh;
-  display        : flex;
-  flex-direction : column;
-  justify-content: center;
-  position       : relative;
+  justify-content: space-between;
+
 }
 
+.left-login {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  width          : 55%;
+
+  .login-container {
+    width      : fit-content;
+    height     : fit-content;
+    margin-left: 25%;
+  }
+}
+
+.bg-wrapper {
+  width: 45%;
+
+  .bg {
+    height  : 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//login form container
 &.box {
   display        : flex;
   flex-direction : column;
@@ -53,56 +158,18 @@ p{
 }
 
 &.login {
-  width   : 353px;
-  height  : 445px;
-  left    : @login-box-margin-left;
-  position: absolute;
-}
-
-.container-sign-up {
-  width          : 100%;
-  height         : 100vh;
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
-  position: relative;
-
-  .bg-image {
-    position       : absolute;
-    justify-content: center;
-    top            : 24px;
-    // left           : 24px;
-    // right          : 24px;
-    width          : 97%;
-    height         : 40%;
-    overflow       : hidden;
-    border-radius: 15px;
-
-    img {
-      width: fit-content;
-    }
-  }
-
-  .bg-padding {
-    padding         : 30px;
-    width           : fit-content;
-    height          : 100%;
-    max-height      : 520px;
-    z-index         : 2;
-    background-color: @White-color;
-    border-radius   : 15px;
-    box-shadow      : 0px 7px 23px rgba(0, 0, 0, 0.05);
-    border-radius   : 15px;
-    margin-top      : 5%;
-  }
+  width      : 353px;
+  height     : 445px;
+  left       : @login-box-margin-left;
+  // position: absolute;
 }
 
 &.sign-up {
   display        : flex;
   justify-content: space-between;
-  left  : 35%;
-  width : 320px;
-  height: 100%;
+  left           : 35%;
+  width          : 350px;
+  height         : 100%;
 
   .register-text {
     margin: 0px 0px 20px 0px;
@@ -273,16 +340,5 @@ p{
     color          : @Main-color;
     text-decoration: none;
   }
-
-}
-
-.login-background-image {
-  margin    : 0;
-  position  : fixed;
-  z-index   : 1;
-  top       : 0;
-  right     : 0;
-  width     : auto;
-  max-height: 90%;
 
 }
