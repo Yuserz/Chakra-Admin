@@ -1,3 +1,22 @@
+@Main-color     : #4FD1C5;
+@White-color    : #FFFFFF;
+@Bg-white-color : #F8F9FA;
+@Gray-color     : #A0AEC0;
+@Gray2-color     : #718096;
+@Dark-color     : #2D3748;
+@Green-color    : #48BB78;
+
+
+.author-table-wrapper{
+
+    img{
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+    }
+
+}
+
 .table-card {
     background     : #FFFFFF;
     box-shadow     : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
@@ -8,4 +27,48 @@
     flex-direction : column;
     justify-content: space-between;
     gap            : 34px;
+
+    .box {
+        .header {
+            font-size    : 18px;
+            font-weight  : bold;
+            color        : @Dark-color;
+            margin-bottom: 6px;
+        }
+
+        .text {
+            font-size: 14px;
+            color    : @Gray-color;
+            display  : flex;
+            gap      : 4px;
+
+            span {
+                font-weight: bold;
+                color      : @Green-color;
+                display    : flex;
+                align-items: center;
+                gap        : 4px;
+            }
+        }
+    }
+
+    .header {
+        font-size  : 18px;
+        font-weight: bold;
+        color      : @Dark-color;
+
+    }
+
+
+    .email {
+        color      : #718096;
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    .info {
+        color      : #718096;
+        font-weight: normal;
+        font-size: 14px;
+    }
 }

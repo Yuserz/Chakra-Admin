@@ -36,12 +36,12 @@ const navItems = [
   {
     icon: icons.signIn2,
     label: "Sign in",
-    path: "/sign-in",
+    path: "/",
   },
   {
     icon: icons.signUp2,
     label: "Sign up",
-    path: "/sign-up",
+    path: "/signUp",
   },
 ];
 
