@@ -15,7 +15,7 @@
         height         : 80px;
         display        : flex;
         justify-content: space-between;
-        background     : #FFFFFF;
+        background     : @White-color;
         box-shadow     : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
         border-radius  : 15px;
     }
@@ -27,18 +27,18 @@
     }
 
     .icon {
-        display     : flex;
-        align-items : center;
-        height      : fit-content;
-        place-self  : center;
-        margin-right: 17.5px;
-        padding: 11.5px;
-        border-radius: 15px;
-        background-color: @Main-color;
+        display          : flex;
+        align-items      : center;
+        height           : fit-content;
+        place-self       : center;
+        margin-right     : 17.5px;
+        padding          : 11.5px;
+        border-radius    : 15px;
+        background-color : @Main-color;
 
         img{
-            width: 22.5px;
-            height: 22.5px;
+            width  : 22.5px;
+            height : 22.5px;
         }
     }
 
@@ -63,11 +63,31 @@
         font-size  : 14px;
         font-weight: bold;
     }
+
     .positive{
-        color      : @Main-color;
+        color: @Main-color;
     }
 
     .negative{
-        color      : @Red-color;
+        color: @Red-color;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .analytics-info {
+        flex-direction: column;
+
+        .card {
+            margin-bottom: 16px;
+        }
+
+        .icon {
+            margin-right: 0;
+            margin-bottom: 12px;
+        }
+
+        .card-text {
+            margin-left: 0;
+        }
     }
 }

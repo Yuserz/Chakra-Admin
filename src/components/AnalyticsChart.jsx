@@ -1,7 +1,8 @@
 import React from "react";
 import "../Styles/Dashboard/analyticsChart.less";
 import icons from "../assets/assets";
-import LineGraph from "../components/Graph/BarGraph";
+import BarGraph from "../components/Graph/BarGraph";
+import LineGraph from "../components/Graph/LineGraph";
 
 const data = [
   {
@@ -33,7 +34,7 @@ export default function AnalyticsChart() {
     <div className="analytics-charts">
       <div className="left">
         <div className=" top chart">
-        <LineGraph />
+          <BarGraph />
         </div>
         <div className="box">
           <p className="header"> Active user</p>
@@ -66,7 +67,7 @@ export default function AnalyticsChart() {
           </p>
         </div>
         <div className="line-chart">
-          
+          <LineGraph />
         </div>
       </div>
     </div>

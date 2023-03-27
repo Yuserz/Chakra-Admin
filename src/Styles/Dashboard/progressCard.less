@@ -1,156 +1,175 @@
-@Main-color     : #4FD1C5;
-@White-color    : #FFFFFF;
-@Bg-white-color : #F8F9FA;
-@Gray-color     : #A0AEC0;
-@Dark-color     : #2D3748;
-@Green-color    : #48BB78;
+@Main-color: #4fd1c5;
+@White-color: #ffffff;
+@Bg-white-color: #f8f9fa;
+@Gray-color: #a0aec0;
+@Dark-color: #2d3748;
+@Green-color: #48bb78;
 
+/* Large Screen */
+@screen-lg: 768px;
+
+/* Small Screen */
+@screen-sm: 767px;
 
 .progress-bar-container {
-    color         : @Main-color;
-    display       : flex;
-    flex-direction: column;
-    gap           : 4.5px;
+  color: @Main-color;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5px;
 }
 
 .progress-bar {
-    width           : 80%;
-    height          : 3px;
-    border-radius   : 14px;
-    background-color: #ddd;
+  width: 80%;
+  height: 3px;
+  border-radius: 14px;
+  background-color: #ddd;
 }
 
 .progress-bar-fill {
-    height          : 100%;
-    border-radius   : 14px;
-    background-color: @Main-color;
-    line-height     : 3px;
-    color           : white;
+  height: 100%;
+  border-radius: 14px;
+  background-color: @Main-color;
+  line-height: 3px;
+  color: white;
 }
 
-
 .progress-container {
-    width          : 100%;
-    min-height     : max-content;
-    display        : flex;
+  width: 100%;
+  min-height: max-content;
+  justify-content: space-between;
+  gap: 24px;
+
+  @media (max-width: @screen-sm) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @screen-lg) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card {
+    // height       : 519px;
+    background: #ffffff;
+    box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+    border-radius: 15px;
+    padding: 20px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap            : 24px;
+    gap: 34px;
+    
 
+    .left-top {
+      width: 100%;
+      justify-content: space-between;
+      display: flex;
+    }
 
-    .card {
-        // height       : 519px;
-        background     : #FFFFFF;
-        box-shadow     : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
-        border-radius  : 15px;
-        padding        : 20px;
-        height         : fit-content;
-        display        : flex;
-        flex-direction : column;
+    .btn {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .left {
+    width: 100%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .right {
+    width: 30%;
+    height: 100%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    .order-progress {
+      display: flex;
+      height: max-content;
+      flex-direction: column;
+      gap: 5.5px;
+      padding: 6px 0px;
+
+      .row {
+        display: flex;
         justify-content: space-between;
-        gap            : 34px;
+        min-width: 90%;
+        width: 90%;
+        height: 61px;
+      }
 
-        .left-top {
-            width          : 100%;
-            justify-content: space-between;
-            display        : flex;
+      .left {
+        display: flex;
+        width: 10%;
+        flex-direction: column;
+        margin: 0px;
+        align-items: center;
+
+        img {
+          width: 16px;
+          height: 16px;
         }
 
-        .btn {
-            width : 20px;
-            height: 20px;
+        .line {
+          margin-top: 6.5px;
+          height: 100%;
+          border: 2px solid #e2e8f0;
+          place-self: center;
+          border-radius: 4px;
+        }
+      }
+
+      .right {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 4.5px;
+
+        .title {
+          font-size: 14px;
+          font-weight: bold;
+          color: @Dark-color;
         }
 
-    }
-
-    .left {
-        width: 70%;
-
-    }
-
-    .right {
-        width : 30%;
-        height: 100%;
-
-        .order-progress {
-            display       : flex;
-            height        : max-content;
-            flex-direction: column;
-            gap           : 5.5px;
-            padding: 6px 0px;
-
-            .row {
-                display        : flex;
-                justify-content: space-between;
-                min-width          : 90%;
-                width: 90%;
-                height         : 61px;
-            }
-
-            .left {
-                display       : flex;
-                width         : 10%;
-                flex-direction: column;
-                margin        : 0px;
-                align-items   : center;
-
-                img {
-                    width : 16px;
-                    height: 16px;
-                }
-
-                .line {
-                    margin-top: 6.5px;
-                    height    : 100%;
-                    border    : 2px solid #E2E8F0;
-                    place-self: center;
-                    border-radius: 4px;
-                }
-            }
-
-            .right {
-                width: 80%;
-                display: flex;
-                flex-direction: column;
-                gap: 4.5px;
-
-                .title {
-                    font-size  : 14px;
-                    font-weight: bold;
-                    color      : @Dark-color;
-                }
-
-                .date {
-                    font-size  : 12px;
-                    font-weight: bold;
-                    color      : @Gray-color;
-                }
-            }
-
+        .date {
+          font-size: 12px;
+          font-weight: bold;
+          color: @Gray-color;
         }
-
+      }
     }
+  }
 }
 
 .box {
-    .header {
-        font-size    : 18px;
-        font-weight  : bold;
-        color        : @Dark-color;
-        margin-bottom: 6px;
-    }
+  .header {
+    font-size: 18px;
+    font-weight: bold;
+    color: @Dark-color;
+    margin-bottom: 6px;
+  }
 
-    .text {
-        font-size: 14px;
-        color    : @Gray-color;
-        display  : flex;
-        gap      : 4px;
+  .text {
+    font-size: 14px;
+    color: @Gray-color;
+    display: flex;
+    gap: 4px;
 
-        span {
-            font-weight: bold;
-            color      : @Green-color;
-            display    : flex;
-            align-items: center;
-            gap        : 4px;
-        }
+    span {
+      font-weight: bold;
+      color: @Green-color;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
+  }
 }
