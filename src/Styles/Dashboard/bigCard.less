@@ -1,171 +1,170 @@
-@Main-color     : #4FD1C5;
-@White-color    : #FFFFFF;
-@Bg-white-color : #F8F9FA;
-@Gray-color     : #A0AEC0;
-@Dark-color     : #2D3748;
-
+@Main-color: #4fd1c5;
+@White-color: #ffffff;
+@Bg-white-color: #f8f9fa;
+@Gray-color: #a0aec0;
+@Dark-color: #2d3748;
 
 .big-cards {
-    width          : 100%;
-    height         : 291px;
-    display        : flex;
+  overflow-y: hidden;
+  width: 100%;
+  height: 291px;
+  min-height: 291px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+
+  .left-big-cards {
+    width: 60%;
+    background: #ffffff;
+    box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
     justify-content: space-between;
-    gap            : 24px;
 
-    .left {
-        width          : 60%;
-        background     : #FFFFFF;
-        box-shadow     : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
-        border-radius  : 15px;
-        padding        : 20px;
-        display        : flex;
-        justify-content: space-between;
-    
-        .context {
-            width: 45%;
-        }
-    
-        h6 {
-            font-size    : 12px;
-            color        : @Gray-color;
-            margin-bottom: 3px;
-        }
-    
-        h4 {
-            font-size    : 18px;
-            color        : @Dark-color;
-            margin-bottom: 6px;
-        }
-    
-        p {
-            font-size    : 14px;
-            color        : @Gray-color;
-            margin-bottom: 141px;
-        }
-    
-        .link-container {
-            width      : fit-content;
-            height     : fit-content;
-            display    : flex;
-            align-items: center;
-            gap        : 4px;
-            cursor     : pointer;
-    
-            a {
-                font-size  : 10px;
-                color      : @Dark-color;
-                font-weight: bold;
-            }
-        }
-    
-        .brand-img {
-            width      : 50%;
-            display    : flex;
-            align-items: center;
-    
-            img {
-                width     : 100%;
-                place-self: center;
-            }
-        }
-    
-        @media (max-width: 768px) {
-            width     : 100%;
-            flex-wrap : wrap;
-    
-            .context {
-                width : 100%;
-                margin-bottom: 20px;
-            }
-    
-            .brand-img {
-                width : 100%;
-                margin-bottom: 20px;
-            }
-    
-            p {
-                margin-bottom: 20px;
-            }
-    
-            h6 {
-                font-size: 10px;
-            }
-    
-            h4 {
-                font-size: 16px;
-            }
-    
-            .link-container {
-                a {
-                    font-size: 8px;
-                }
-            }
-        }
+    .context {
+      width: 45%;
     }
-    
 
-    .right {
-        position     : relative;
-        padding        : 20px;
-        width        : 40%;
-        background   : #FFFFFF;
-        box-shadow   : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+    h6 {
+      font-size: 12px;
+      color: @Gray-color;
+      margin-bottom: 3px;
+    }
+
+    h4 {
+      font-size: 18px;
+      color: @Dark-color;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 14px;
+      color: @Gray-color;
+      margin-bottom: 141px;
+    }
+
+    .link-container {
+      width: fit-content;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+
+      a {
+        font-size: 10px;
+        color: @Dark-color;
+        font-weight: bold;
+      }
+    }
+
+    .brand-img {
+      width: 50%;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 100%;
+        place-self: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      flex-wrap: wrap;
+
+      .context {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .brand-img {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      h6 {
+        font-size: 10px;
+      }
+
+      h4 {
+        font-size: 16px;
+      }
+
+      .link-container {
+        a {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+
+  .right-big-cards {
+    position: relative;
+    padding: 20px;
+    width: 40%;
+    max-height: 100%;
+    background: #ffffff;
+    box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+    border-radius: 15px;
+
+    .box {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      background-image: url("/assets/images/bigCardBG.png");
+      border-radius: 15px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+
+      div {
         border-radius: 15px;
+        overflow: hidden;
+      }
 
-        .box {
-            display         : flex;
-            overflow        : hidden;
-            width           : 100%;
-            background-image: url('/assets/images/bigCardBG.png');
-            width           : 100%;
-            border-radius   : 15px;
-            height          : 100%;
+      .context {
+        padding: 15px;
+        position: relative;
+        max-width: 100%;
+        // white-space  : nowrap;
+      }
 
-            div {
-                border-radius: 15px;
-                overflow     : hidden;
-            }
+      h4 {
+        font-size: 18px;
+        margin-bottom: 6px;
+        color: @White-color;
+      }
 
-            .context {
-                padding : 15px;
-                position: relative;
-                max-width: 100%;
-                // white-space  : nowrap;
-            }
+      p {
+        max-width: 90%;
+        min-width: 60%;
+        font-size: 14px;
+        margin-bottom: 128.5px;
+        color: @White-color;
+      }
 
-            h4 {
-                font-size    : 18px;
-                margin-bottom: 6px;
-                color        : @White-color;
-            }
+      .link-container {
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
 
-            p {
-                max-width: 90%;
-                min-width: 60%;
-                font-size    : 14px;
-                margin-bottom: 128.5px;
-                color        : @White-color;
-            }
-
-            .link-container {
-                width      : fit-content;
-                height     : fit-content;
-                display    : flex;
-                align-items: center;
-                gap        : 4px;
-                cursor     : pointer;
-
-                a {
-                    font-size  : 10px;
-                    color      : @White-color;
-                    font-weight: bold;
-                }
-            }
+        a {
+          font-size: 10px;
+          color: @White-color;
+          font-weight: bold;
         }
-
-
-
+      }
     }
+  }
 }
 
 // Small screens
@@ -288,30 +287,29 @@
 
 // Small screens
 @media screen and (max-width: 768px) {
-    .big-cards {
-      flex-direction: column;
-  
-      .left,
-      .right {
-        width: 100%;
-      }
-  
-      .left {
-        margin-bottom: 24px;
-      }
+  .big-cards {
+    flex-direction: column;
+
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    .left {
+      margin-bottom: 24px;
     }
   }
-  
-  // Large screens
-  @media screen and (min-width: 769px) {
-    .big-cards {
-      .left {
-        width: 60%;
-      }
-  
-      .right {
-        width: 40%;
-      }
+}
+
+// Large screens
+@media screen and (min-width: 769px) {
+  .big-cards {
+    .left {
+      width: 60%;
+    }
+
+    .right {
+      width: 40%;
     }
   }
-  
+}

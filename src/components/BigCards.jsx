@@ -8,7 +8,7 @@ import bgImage from "../assets/images/bigCardBG.png";
 export default function BigCards() {
   return (
     <div className="big-cards">
-      <div className="left">
+      <div className="left-big-cards">
         <div className="context">
           <h6>Built by developers</h6>
           <h4>Purify UI Dashboard</h4>
@@ -26,7 +26,7 @@ export default function BigCards() {
           <img src={brandImage} alt="" />
         </div>
       </div>
-      <div className="right">
+      <div className="right-big-cards">
         <div className="box">
           <div className="context">
             <h4>Work with the Rockets</h4>
