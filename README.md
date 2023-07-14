@@ -1,15 +1,15 @@
-<h1>Frontend Assessment</h1>
+# Chakra Admin Panel 
+#### Frontend Assessment that is built with  React, Vite and LESS css
 
-<h3>React js, Vite Framework and LESS css </h3>
-
-<h1>Prerequisite</h1>
+## Prerequisite
 
 Node Js
+IDE- VScode
 
-<h2>INSTALL DEPENDENCIES</h2>
+## INSTALL DEPENDENCIES
 
 `npm install`
 
-<h2>START</h2>
+##START
 
 `npm run dev`
