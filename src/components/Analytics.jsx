@@ -1,59 +1,58 @@
 import "../Styles/main.less";
 import "../Styles/Dashboard/analytics.less";
 import React from "react";
-import icons from "../assets/assets"
+import icons from "../assets/assets";
+
+const cardData = [
+  {
+    text: "Today's Money",
+    number: "$53,000",
+    percent: "+55%",
+    icon: icons.wallet,
+  },
+  {
+    text: "Today's Users",
+    number: "2,300",
+    percent: "+5%",
+    icon: icons.globe,
+  },
+  {
+    text: "New Clients",
+    number: "+3,052",
+    percent: "-14%",
+    icon: icons.client,
+  },
+  {
+    text: "Total Sales",
+    number: "$173,000",
+    percent: "+8%",
+    icon: icons.cart,
+  },
+];
 
 export default function Analytics() {
   return (
     <div className="analytics-info">
-      <div className="card">
-        <div className="card-text">
-          <p className="text">Today's Money</p>
-          <div className="status">
-            <p className="number">$53,000</p>
-            <p className="percent positive">+55%</p>
+      {cardData.map((data, index) => (
+        <div className="card" key={index}>
+          <div className="card-text">
+            <p className="text">{data.text}</p>
+            <div className="status">
+              <p className="number">{data.number}</p>
+              <p
+                className={`percent ${
+                  data.percent.startsWith("+") ? "positive" : "negative"
+                }`}
+              >
+                {data.percent}
+              </p>
+            </div>
+          </div>
+          <div className="icon">
+            <img src={data.icon} alt="icon" />
           </div>
         </div>
-        <div className="icon">
-          <img src={icons.wallet} alt="icon" />
-        </div>
-      </div>
-      <div className="card">
-        <div className="card-text">
-          <p className="text">Today's Users</p>
-          <div className="status">
-            <p className="number">2,300</p>
-            <p className="percent positive">+5%</p>
-          </div>
-        </div>
-        <div className="icon">
-          <img src={icons.globe} alt="icon" />
-        </div>
-      </div>
-      <div className="card">
-        <div className="card-text">
-          <p className="text">New Clients</p>
-          <div className="status">
-            <p className="number">+3,052</p>
-            <p className="percent negative">-14%</p>
-          </div>
-        </div>
-        <div className="icon">
-          <img src={icons.client} alt="icon" />
-        </div>
-      </div>
-      <div className="card">
-        <div className="card-text">
-          <p className="text">Total Sales</p>
-          <div className="status">
-            <p className="number">$173,000</p>
-            <p className="percent positive">+8%</p>
-          </div>
-        </div>
-        <div className="icon">
-          <img src={icons.cart} alt="icon" />
-        </div>
-      </div>
+      ))}
     </div>
   );
 }

@@ -1,93 +1,89 @@
-@Main-color     : #4FD1C5;
-@White-color    : #FFFFFF;
-@Bg-white-color : #F8F9FA;
-@Gray-color     : #A0AEC0;
-@Dark-color     : #2D3748;
-@Red-color     : #E53E3E;
+@import "../colors.less";
+@import "../main.less";
+
+// Define a mixin for flex display
+.flex-display(@justify: flex-start, @align: flex-start) {
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
+}
 
 .analytics-info {
-    display        : flex;
-    justify-content: space-between;
-    gap            : 24px;
+  .flex-display(space-between);
+  gap: 8px;
+  width: 100%;
+  flex-wrap: wrap;
 
-    .card {
-        width          : 100%;
-        height         : 80px;
-        display        : flex;
-        justify-content: space-between;
-        background     : @White-color;
-        box-shadow     : 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
-        border-radius  : 15px;
-    }
+  .card {
+    width: 100%;
+    gap: 8px;
+    height: 80px;
+    .flex-display(space-between);
+    background: @White-color;
+    box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+    border-radius: 15px;
+    padding: 4px;
 
     .status {
-        display    : flex;
-        align-items: baseline;
-        gap        : 4px;
+      .flex-display(flex-start, baseline);
+      gap: 4px;
     }
 
     .icon {
-        display          : flex;
-        align-items      : center;
-        height           : fit-content;
-        place-self       : center;
-        margin-right     : 17.5px;
-        padding          : 11.5px;
-        border-radius    : 15px;
-        background-color : @Main-color;
+      .flex-display();
+      height: fit-content;
+      place-self: center;
+      margin-right: 17.5px;
+      padding: 11.5px;
+      border-radius: 15px;
+      background-color: @Main-color;
 
-        img{
-            width  : 22.5px;
-            height : 22.5px;
-        }
+      img {
+        width: 22.5px;
+        height: 22.5px;
+      }
     }
 
     .card-text {
-        font-size     : 12px;
-        color         : @Gray-color;
-        margin-left   : 21.5px;
-        display       : flex;
-        flex-direction: column;
-        height        : fit-content;
-        place-self    : center;
-        gap           : 10px;
+      flex-direction: column;
+      font-size: 12px;
+      color: @Gray-color;
+      margin-left: 21.5px;
+      .flex-display(column);
+      height: fit-content;
+      place-self: center;
+      gap: 10px;
     }
 
     .number {
-        font-size  : 18px;
-        color      : @Dark-color;
-        font-weight: bold;
+      font-size: 18px;
+      color: @Dark-color;
+      font-weight: bold;
     }
 
     .percent {
-        font-size  : 14px;
-        font-weight: bold;
+      font-size: 14px;
+      font-weight: bold;
     }
 
-    .positive{
-        color: @Main-color;
+    .positive {
+      color: @Main-color;
     }
 
-    .negative{
-        color: @Red-color;
+    .negative {
+      color: @Red-color;
     }
-}
 
-@media(max-width: 1100px) {
-    .analytics-info {
-        flex-direction: column;
+    .media(@tablet; {
+      width: calc(50% - 12px);
+    });
 
-        .card {
-            margin-bottom: 16px;
-        }
+    .media(@desktop; {
+      width: calc(25% - 18px);
+    });
 
-        .icon {
-            margin-right: 0;
-            margin-bottom: 12px;
-        }
-
-        .card-text {
-            margin-left: 0;
-        }
-    }
+    .media(@mobile; {
+      width: calc(100% - 18px);
+    });
+  }
 }

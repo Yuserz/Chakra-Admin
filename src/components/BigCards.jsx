@@ -10,11 +10,13 @@ export default function BigCards() {
     <div className="big-cards">
       <div className="left-big-cards">
         <div className="context">
-          <h6>Built by developers</h6>
-          <h4>Purify UI Dashboard</h4>
-          <p>
-            From colors, cards, typography to complex elements,&nbsp;
-            <span>you will find the full documentation.</span>
+          <p className="text">
+            <h6>Built by developers</h6>
+            <h4>Purify UI Dashboard</h4>
+            <p>
+              From colors, cards, typography to complex elements,&nbsp;
+              <span>you will find the full documentation.</span>
+            </p>
           </p>
 
           <div className="link-container">
@@ -27,17 +29,18 @@ export default function BigCards() {
         </div>
       </div>
       <div className="right-big-cards">
-        <div className="box">
-          <div className="context">
-            <h4>Work with the Rockets</h4>
-            <p>
-              Wealth creation is an evolutionarily recent positive-sum game. It
-              is all about who take the opportunity first.
-            </p>
-            <div className="link-container">
-              <a>Read more</a>
-              <img className="icon" src={icons.arrowWhite} alt=">" />
-            </div>
+        <div className="img-container">
+          <img className="img2" src="/assets/images/bigCardBG.png" alt="" />
+        </div>
+        <div className="context">
+          <h4>Work with the Rockets</h4>
+          <p>
+            Wealth creation is an evolutionarily recent positive-sum game. It is
+            all about who take the opportunity first.
+          </p>
+          <div className="link-container">
+            <a>Read more</a>
+            <img className="icon" src={icons.arrowBlack} alt=">" />
           </div>
         </div>
       </div>
